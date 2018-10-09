@@ -211,13 +211,14 @@ def handle_updates(updates):
 
 
         elif text==("/help"):
-            send_message("Komutlar şu şekilde \n bugün yemekte {yemek} var mı \n resimli menu \n  /boronafoto \n /boronatoday",chat)
+            keyboard=build_keyboard(["bugün yemekte {yemek} var mı","/boronafoto","resimli menu","Sevmediğim yemekler(coming soon)"])
+            send_message("Komutlar şu şekilde",chat,keyboard)
             
             
 
 def build_keyboard(items):
     keyboard = [[item] for item in items]
-    reply_markup = {"keyboard":keyboard, "one_time_keyboard": True}
+    _markup = {"keyboard":keyboard, "one_time_keyboard": True}
     return json.dumps(reply_markup)
 
 
