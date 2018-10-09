@@ -203,6 +203,10 @@ def handle_updates(updates):
 
         else:
             continue
+            
+elif text=="/"):
+    send_message("Lütfen komut girin.",chat)
+    
 
 def build_keyboard(items):
     keyboard = [[item] for item in items]
