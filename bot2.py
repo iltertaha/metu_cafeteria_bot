@@ -1,6 +1,3 @@
-
-
-
 import json
 import requests
 import time
@@ -119,11 +116,9 @@ def handle_updates(updates):
             print("asd")
         chat = update["message"]["chat"]["id"]
 
-        if text == "/done":
-            send_message("Bot turned of", chat)
-            new_offset = last_update_id + 1
+        
 
-        elif text == "/start":
+        if text == "/start":
             keyboard=build_keyboard(["a","b"])
             send_message("Hi,I'm boronabot for metu cafeteria.How can I help you?", chat,keyboard)
             new_offset = last_update_id + 1
