@@ -135,7 +135,7 @@ def handle_updates(updates):
             send_message("Sorry,there is no borona for today",chat)
             send_image(TOKEN,"https://cdn.shopify.com/s/files/1/1061/1924/products/Sad_Face_Emoji_large.png",chat)
             new_offset = last_update_id + 1
-        elif text=="Yemekte ne var?":
+        elif text.lower()=="yemekte ne var?":
             if yemekhane_daily():
                 keyboard=build_keyboard(["Yemekte ne var?","resimli menu","Sevmediğim yemekler(coming soon)"])
                 send_message("Menuyu bir kontrol edeyim",chat,keyboard)
