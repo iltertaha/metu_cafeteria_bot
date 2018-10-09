@@ -207,6 +207,13 @@ def handle_updates(updates):
         elif text==("/help"):
             send_message("Komutlar şu şekilde \n bugün yemekte {yemek} var mı \n resimli menu \n  /boronafoto \n /boronatoday",chat)
             
+        elif text == "/tarih":
+            tarih=datetime.date.today()
+            send_message("Bugunun tarihi: "+tarih, chat,keyboard)
+            new_offset = last_update_id + 1
+
+
+            
             
 def build_keyboard(items):
     keyboard = [[item] for item in items]
