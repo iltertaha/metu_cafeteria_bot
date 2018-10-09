@@ -204,9 +204,16 @@ def handle_updates(updates):
         else:
             continue
             
-elif text=="/"):
-    send_message("Lütfen komut girin.",chat)
+      
+        elif text=="/"):
+            send_message("Lütfen komut girin.",chat)
     
+
+
+        elif text==("/help"):
+            send_message("Komutlar şu şekilde \n bugün yemekte {yemek} var mı \n resimli menu \n  /boronafoto \n /boronatoday",chat)
+            
+            
 
 def build_keyboard(items):
     keyboard = [[item] for item in items]
