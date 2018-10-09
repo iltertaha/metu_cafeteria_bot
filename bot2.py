@@ -7,7 +7,7 @@ import time
 import urllib
 import datetime
 import io
-import urllib.request as urllib2
+
 from bs4 import BeautifulSoup
 
 TOKEN = "512294390:AAFBkxoQCkrGleUtsgHhGQJFcQq-0UAYPG0"
