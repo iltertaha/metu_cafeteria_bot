@@ -122,6 +122,11 @@ def handle_updates(updates):
             keyboard=build_keyboard(["a","b"])
             send_message("Hi,I'm boronabot for metu cafeteria.How can I help you?", chat,keyboard)
             new_offset = last_update_id + 1
+            
+        elif text == "/version":
+            #keyboard=build_keyboard(["a","b"])
+            send_message("version 0.1.1", chat,keyboard)
+            new_offset = last_update_id + 1
 
 
         elif text == "/boronatoday":
