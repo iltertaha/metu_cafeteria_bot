@@ -3,7 +3,9 @@ import requests
 import time
 import urllib
 import datetime
+from datetime import date
 import io
+
 
 from bs4 import BeautifulSoup
 
@@ -125,6 +127,13 @@ def handle_updates(updates):
             
         elif text == "/version":
             #keyboard=build_keyboard(["a","b"])
+            send_message("version 0.1.1", chat,keyboard)
+            new_offset = last_update_id + 1
+            
+        elif text == "/datetoday":
+            #keyboard=build_keyboard(["a","b"])
+            today = date.today()
+            print("Today's date:", today)
             send_message("version 0.1.1", chat,keyboard)
             new_offset = last_update_id + 1
 
